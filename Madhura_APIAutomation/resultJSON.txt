@@ -1,0 +1,31 @@
+{
+  "random": 6,
+  "random_float": 7.428,
+  "bool1": true,
+  "date": "1982-07-07",
+  "firstname": "Bee",
+  "lastname": "Fax",
+  "city": "Yangon",
+  "email_uses_current_data": "Bee.Fax@gmail.com",
+  "array": [
+    "Tracey",
+    "Ninnetta",
+    "Starla",
+    "Angelique",
+    "Misha"
+  ],
+  "Array_Of_Obj": [
+    {
+      "index": 0,
+      "val": 5
+    },
+    {
+      "index": 1,
+      "val": 6
+    },
+    {
+      "index": 2,
+      "val": 7
+    }
+  ]
+}
