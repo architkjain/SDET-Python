@@ -1,2 +1,0 @@
-flag,baseurl,mailbox,auth_ep,emails_ep
-y,https://www.ahem.email,aniruddha,/api/auth/token,/api/mailbox/{mailboxName}/email

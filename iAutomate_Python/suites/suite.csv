@@ -1,8 +1,0 @@
-SR,GROUPNAME,TESTCASE,EXECUTE
-1,API_test,TestCase_API,n
-1,API_test,TestCase_AHEM_API,n
-1,Mobile_Auto_Test,TestCase_MobileAutomation,n
-1,TC_Group_AWS_S3,TestCase_create_s3_bucket,n
-1,TC_Group_AWS_S3,TestCase_create_and_dislpay_s3_bucket,n
-1,Web_Auto_Test,TestCase_WebAutomation,y
-1,Web_Auto_Test,TestCase_ProductEngg,y
