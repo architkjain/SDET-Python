@@ -15,6 +15,5 @@ driver.find_element_by_id("submitButton").click()
 print("Done")
 driver.get("https://xornet.xoriant.com/xoriant-holidays")
 
-#driver.find_element_by_css_selector("input[type='email']").send_keys("xor-ind\khatri_s")
-#driver.find_element_by_css_selector("input[type='password']").send_keys("Delta@21")
+
 
