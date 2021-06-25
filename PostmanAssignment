@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "206fedc2-c46b-42cb-8495-f7cee7b950d6",
+		"name": "GitLab API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Answer2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?name=AutoTestUser&job=testing",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "AutoTestUser"
+						},
+						{
+							"key": "job",
+							"value": "testing"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=1",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/unknown",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/unknown?id=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/login?email=peter@klaven",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "peter@klaven"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"random\": 6,\r\n  \"random float\": 7.428,\r\n  \"bool\": true,\r\n  \"date\": \"1982-07-07\",\r\n  \"firstname\": \"Bee\",\r\n  \"lastname\": \"Fax\",\r\n  \"city\": \"Yangon\",\r\n  \"email uses current data\": \"Bee.Fax@gmail.com\",\r\n  \"array\": [\r\n    \"Tracey\",\r\n    \"Ninnetta\",\r\n    \"Starla\",\r\n    \"Angelique\",\r\n    \"Misha\"\r\n  ],\r\n  \"ArrayOfObj\": [\r\n    {\r\n      \"index\": 0,\r\n      \"val\": 5\r\n\r\n\r\n    },\r\n    {\r\n      \"index\": 1,\r\n      \"val\": 6\r\n    },\r\n    {\r\n      \"index\": 2,\r\n      \"val\": 7\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User\" : {\r\n        \"Id\" : \"574\",\r\n        \"userPropertiesAsJsonString\" : {\r\n            \"properties\" : {\r\n                \"propertyName\" : \"test\",\r\n                \"propertyDesc\" : \"desc\"\r\n            }\r\n        }\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://reqres.in",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
