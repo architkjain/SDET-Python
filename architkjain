@@ -1,0 +1,99 @@
+import requests
+import json
+
+
+class ApiValidation:
+    #def __init__(self):
+        #df=pd.read_json("D:\\Assignment\\jsonToObject.json")
+        #print(df)
+        #loaded_json = json.loads("D:\\Assignment\\jsonToObject.json")
+        #self.__dict__ = loaded_json
+
+    def req(_self_):
+        RequestURL = "https://reqres.in/api/users?page=1"
+        headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+        print("RequestURL  :", RequestURL)
+        authTokenResponse = requests.get(RequestURL, headers=headers)
+        responseStatusCode = authTokenResponse.status_code
+        responseData = authTokenResponse.json()
+        print("Getting total records nuber",len(responseData["data"]))
+        if responseStatusCode == 200:
+            print("Status code Validated")
+
+    def verifyStatus201(_self_):
+        RequestURL = "https://reqres.in/api/users"
+        headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+        with open("D:\\Assignment\\verifyStatus201.json") as json_file:
+            json_data = json.load(json_file)
+            data = json.dumps(json_data)
+        authTokenResponse = requests.post(RequestURL, data, headers=headers)
+        responseStatusCode = authTokenResponse.status_code
+        responseData = authTokenResponse.json()
+        print("user id validated",responseData["id"])
+        print("Created at Time",responseData["createdAt"].split("T")[0])
+        if responseStatusCode == 201:
+            print("Status code Validated")
+
+
+    #def jsonToObject(_self_):
+        parsed_json = (json.loads("D:\\Assignment\\jsonToObject.json"))
+        print(json.dumps(parsed_json, indent=4, sort_keys=True))
+
+        #out_file = open("D:\\Assignment\\myfile.json", "w")
+        #json.dump("D:\\Assignment\\jsonToObject.txt", out_file, indent=6)
+        #out_file.close()
+
+    def q3Get(self):
+        RequestURL = "https://reqres.in/api/users/23"
+        headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+        print("RequestURL  :", RequestURL)
+        authTokenResponse = requests.get(RequestURL, headers=headers)
+        responseStatusCode = authTokenResponse.status_code
+        responseData = authTokenResponse.json()
+        print(responseStatusCode)
+        #print("Getting total records nuber", len(responseData["data"]))
+
+    def q4Get(self):
+        RequestURL = "https://reqres.in/api/unknown"
+        headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+        print("RequestURL  :", RequestURL)
+        authTokenResponse = requests.get(RequestURL, headers=headers)
+        responseStatusCode = authTokenResponse.status_code
+        responseData = authTokenResponse.json()
+
+        print("Year is :", responseData["data"][0]["name"])
+        print("Name is :", responseData["data"][0]["name"])
+
+    def q5Post(self):
+        RequestURL = "https://reqres.in/api/login"
+        headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+        with open("D:\\Assignment\\q5Post.json") as json_file:
+            json_data = json.load(json_file)
+            data = json.dumps(json_data)
+        authTokenResponse = requests.post(RequestURL, data, headers=headers)
+        responseStatusCode = authTokenResponse.status_code
+        responseData = authTokenResponse.json()
+        print(responseData)
+        print(responseStatusCode)
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    ob=ApiValidation()
+    ob.q5Post()
+
+    #ob.q4Get()
+    #  ob.req()
+    #ob.verifyStatus201()
+    #ob.jsonToObject()
+    #ob.q3Get()
+
+
+
+
